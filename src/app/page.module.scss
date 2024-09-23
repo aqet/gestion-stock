@@ -1,0 +1,649 @@
+.nav{
+    min-width: 360px;
+    display: flex;
+    justify-content: center;
+    border-bottom: gray 1px solid;  
+    background-color: gray;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    .div{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        align-items: center;
+        height: 50px;
+        padding: 5px 10px;
+        width: 100%;
+
+        .navigate{
+            display: flex;
+            gap: 20px;
+        }
+        
+        .element{
+            border-bottom: solid 1px black;
+            cursor: pointer;
+        }
+
+        .element:hover{
+            border-bottom:  var(--orange-color) 3px solid;
+            color: white;
+            font-weight: bold;
+        }
+
+        .color{
+            border-bottom: var(--orange-color) 3px solid;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        ul{
+            a{
+                text-decoration: none;
+                color: black;
+
+            }
+        }
+    }
+}
+
+// .react-calendar{
+//     background-color: var(--popup-bgcq);
+// }
+
+.search{
+    min-width: 360px;
+    height: 50px;
+    right: 0;
+    top: 51px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 10px;
+
+    .Isearch{
+        height: 30px;
+        border: none;
+        border-left: 1px solid #4f475861;
+        border-bottom: 1px solid #4f475861;
+        border-bottom-left-radius: 5px;
+        background-color: var(--bgc-input);
+        color: white;
+        padding: 5px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .Isearch:focus{
+        background-color: #ffa500cc;
+        outline: none;
+        border-left: 2px blue solid;
+        border-bottom: 2px blue solid;
+    }
+
+    .span{
+        width: 70%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(white, gray);
+        cursor: pointer;
+        border-radius: 5px;
+        
+    }
+}
+
+.addLoan{
+    min-width: 360px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 51px;
+    padding-right: 20px;
+    height: 50px;
+    gap: 20px;
+
+    button{
+        background-color: var(--orange-color);
+        border: none;
+        padding: 10px 30px;
+        border-radius: 10px;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        height: max-content;
+        cursor: pointer;
+    }
+
+    button:active{
+        background-color: rgb(255, 181, 85);
+    }
+}
+
+.proposition{
+    background-color: var(--popup-bgc);
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    position:absolute;
+
+    div{
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    div:hover{
+        background-color: #acacac;
+    }
+}
+
+.contener{
+    min-width: 360px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 51px;
+
+    .add{
+        display: grid;
+        justify-content: center;
+
+        .input{
+            display: flex;
+            // grid-template-columns: repeat(3, minmax(0, 1fr));
+            flex-wrap: wrap;
+            gap:  15px 10px;
+            justify-content: start;
+            align-items: center;
+            padding-bottom: 10px;
+
+
+            .divInput{
+                display: flex;
+                justify-content: center;
+                width: 335px;
+                gap: 5px;
+
+                label{
+                    width: 105px;
+                }
+
+                input{
+                    max-width: 220px;
+                    width: 100%;
+                    height: 30px;
+                    border: none;
+                    border-left: 1px solid #4f475861;
+                    border-bottom: 1px solid #4f475861;
+                    border-bottom-left-radius: 5px;
+                    background-color: var(--bgc-input);
+                    color: white;
+                    padding: 5px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    
+                }
+
+                input:focus {
+                    background-color: #ffa500cc;
+                    outline: none;
+                    border-left: 2px blue solid;
+                    border-bottom: 2px blue solid;
+                }
+            }
+
+            
+        }
+        
+        .btnSave{
+            display: flex;
+            justify-content: end;
+
+            button{
+                padding: 10px 30px;
+                background-color: var(--orange-color);
+                border: none;
+                border-radius: 15px;
+                color: white;
+                font-weight: bolder;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            button:active {
+                background-color: rgb(255, 181, 85);
+            }
+        }
+    }
+
+    .head{
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+        padding: 0 10px;
+
+        p{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .product{
+        display: flex;
+        justify-content: space-between;
+        min-height: 60px;
+        align-items: center;
+        background-color: white;
+        padding: 0 10px;
+        border-radius: 5px;
+
+        p{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            gap: 5px;
+            
+            button{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 30px;
+                background-color: white;
+                cursor: pointer;
+                transition: 0.1s;
+                gap: 5px;
+                width: 90px;
+            }
+
+            .paye{
+                background-color: #04fb04;
+                box-shadow: 3px 5px 5px green;
+            }
+
+            #avance{
+                background-color: yellow;
+                box-shadow: 3px 5px 5px #848408;
+            }
+
+            .delete{
+                background-color: red;
+                box-shadow: 3px 5px 5px #910606;
+            }
+    
+            .update{
+                background-color: yellow;
+                box-shadow: 3px 5px 5px #848408;
+            }
+
+            .delete:active, .update:active, #paye:active, #avance:active{
+                box-shadow: none;
+            }
+        
+        }
+    }
+
+    .list{
+        display: grid;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    .dashboard{
+        max-width: 1000px;
+        width: 100%;
+        padding: 0 10px;
+        display: grid;
+        gap: 20px;
+
+    }
+
+    .enter{
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 10px;
+        display: grid;
+        gap: 20px;
+
+        button{
+            width: max-content;
+            padding: 10px 20px;
+            background-color: var(--orange-color);
+            border: none;
+            border-radius: 23px;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .Detail{
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 10px;
+        display: grid;
+        gap: 20px;
+
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .vente{
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 10px;
+        display: grid;
+        gap: 20px;
+
+    }
+
+    .commande{
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 10px;
+        display: grid;
+        gap: 20px;
+    }
+
+    .Loan{
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 10px;
+        display: grid;
+        gap: 20px;
+
+        .head{
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 0 50px;
+        }
+
+        .list{
+
+            .element{
+                display: flex;
+                align-items: end;
+                flex-direction: column;
+                .head{
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 60px;
+                    align-items: center;
+                    padding: 0 10px;
+                }
+
+                .box{
+                    background-color: var(--popup-bgc);
+                    max-width: 250px;
+                    min-height: 100px;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 10px;
+                    gap: 20px;
+                    border-radius: 10px;
+                    
+                    .valider{
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        padding: 0 20px;
+
+                        button{
+                            background-color: var(--orange-color);
+                            border: none;
+                            border-radius: 30px;
+                            font-size: 15px;
+                            color: white;
+                            font-weight: bold;
+                            padding: 10px 20px;
+                            cursor: pointer;
+                        }
+
+                        button:active{
+                            background-color: rgb(255, 181, 85);
+                        }
+                    }
+
+                    input{
+                        max-width: 220px;
+                        width: 100%;
+                        height: 30px;
+                        border: none;
+                        border-left: 1px solid #4f475861;
+                        border-bottom: 1px solid #4f475861;
+                        border-bottom-left-radius: 5px;
+                        background-color: var(--bgc-input);
+                        color: white;
+                        padding: 5px;
+                        font-size: 15px;
+                        font-weight: bold;
+                        
+                    }
+    
+                    input:focus {
+                        background-color: #ffa500cc;
+                        outline: none;
+                        border-left: 2px blue solid;
+                        border-bottom: 2px blue solid;
+                    }
+                    
+                    .bottomArrow{
+                        width: 0;
+                        height: 0;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid white;
+                        font-size: 0;
+                        line-height: 0;
+                        transform: rotate(180deg);
+                        transition: 1s linear;
+                        position: absolute;
+                        top: 100%;
+                        right: 25%;
+                    }
+                
+                }
+
+                a{
+                    width: 90%;
+                    background-color: var(--bgc-input);
+                    border-bottom: 1px solid gray;
+                    border-radius: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    min-height: 60px;
+                    align-items: center;
+                    padding: 0 10px;
+                    cursor: auto;
+                }
+            }
+        
+
+            a{
+                display: grid;
+                grid-template-columns: auto auto;
+                padding: 0 50px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .head{
+        h2{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            span{
+                color: var(--orange-color);
+                font-size: 30px;
+
+            }
+        }   
+        
+        button{
+            background-color: var(--orange-color);
+            border: none;
+            padding: 10px 30px;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            height: max-content;
+            cursor: pointer;
+        }
+    
+        button:active{
+            background-color: rgb(255, 181, 85);
+        }
+
+    }
+
+    .popup{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#00000073, rgb(226, 226, 209));
+        // #00000073;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        top: 0;
+
+        .Pop{
+            background-color: #fff;
+            border-radius: 10px;
+            max-width: 350px;
+            width: 100%;
+
+            .head{
+                background-color: var(--bgc-input);
+                border-radius: 10px 10px 0 0 ;
+
+                p{
+                    justify-content: start;
+                }
+
+                img{
+                    cursor: pointer;
+                }
+            }
+
+            .body{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 50px;
+                gap: 20px;
+
+                input{
+                    height: 30px;
+                    border: none;
+                    border-left: 1px solid #4f475861;
+                    border-bottom: 1px solid #4f475861;
+                    border-bottom-left-radius: 5px;
+                    background-color: var(--bgc-input);
+                    color: white;
+                    padding: 5px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    
+                }
+
+                input:focus {
+                    background-color: #ffa500cc;
+                    outline: none;
+                    border-left: 2px blue solid;
+                    border-bottom: 2px blue solid;
+                }
+
+                button{
+                    background-color: var(--orange-color);
+                    border: none;
+                    padding: 10px 30px;
+                    border-radius: 10px;
+                    color: white;
+                    font-size: 15px;
+                    font-weight: bold;
+                    height: max-content;
+                    cursor: pointer;
+                }
+            
+                button:active{
+                    background-color: rgb(255, 181, 85);
+                }
+            }
+        }
+    }
+
+    .Nav{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 5px 0 10px 0;
+        background-color: var(--bgc-input);
+        padding: 10px 0;
+        box-shadow: 0px 0px 15px black;
+        margin: 20px 0;
+
+    
+        .NavElement{
+            background-color: var(--bgc-input);
+            padding: 10px;
+            border-radius: 30px;
+            min-width: 100px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        :hover{
+            background-color: white;
+            color: black;
+            font-weight: normal;
+        }
+        
+        .active{
+            background-color: white;
+            color: black;
+            font-weight: normal;
+        }
+    }
+
+    .detailLoan{
+        max-width: 1200px;
+        width: 100%;
+    }
+}
