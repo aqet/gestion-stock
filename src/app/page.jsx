@@ -52,7 +52,8 @@ export default function Home() {
     ])
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/api/data')
+        fetch('http://0.0.0.0:5000/api/data')
+        // https://5cf2-154-72-150-244.ngrok-free.app
           .then(response => response.json())
           .then(data => setData(data));  
     }, []);

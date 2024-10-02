@@ -21,6 +21,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "src/app/Admin/ppp/page.jsx", "src/app/Admin/layout.jsx", ".next/types/app/Admin/layout.tsx"],
   "exclude": ["node_modules"]
 }

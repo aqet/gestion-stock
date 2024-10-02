@@ -5,7 +5,7 @@ from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000'])
+CORS(app, origins=['*'])
 
 CORS(app)
 def get_data_from_db():
@@ -393,9 +393,49 @@ def deleteLoan():
         print(error)
         return jsonify({'error': str(error)}), 500
 
+
+
+
+@app.route('/api/pass', methods=['POST'])
+def chekPass():
+    data=request.get_json()
+    try:
+        conn=mc.connect(host='localhost', database='DBGestionStock', user='root', password='')
+        mycursor = conn.cursor()
+        requet = 'SELECT nom, pass FROM authentification WHERE nom="'+data[0]['nom']+'" AND pass="'+data[0]['pass']+'"'
+        mycursor.execute(requet)
+        if len(mycursor.fetchall())>0:
+            return jsonify({'message': 'donne envyer avec success'}), 200
+        else:
+            return jsonify({'message': 'donne envyer avec success'}), 201
+
+    except mc.Error as error:
+        print(error)
+        return jsonify({'error': str(error)}), 500
+
+
+
+
+
+@app.route('/api/analyse', methods=['POST'])
+def analyse():
+    data = request.get_json()
+    print('dada', data)
+    try:
+        conn=mc.connect(host='localhost', database='DBGestionStock', user='root', password='')
+        mycursor = conn.cursor()
+        # requet = 'SELECT date, nom, code, quantite, prixU FROM vente ORDER BY date asc'
+        requet='SELECT vente.date, vente.nom, vente.code, vente.quantite, vente.prixU, product.prixU FROM vente, product where product.nom=vente.nom and product.code=vente.code and vente.date like "%'+data['dateFilter']+'%" ORDER BY vente.date asc;'
+        mycursor.execute(requet)
+        element=mycursor.fetchall()
+        print(element)
+        return element
+    except mc.Error as error:
+        print(error)
+        return jsonify({'error': str(error)}), 500
         
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
 
 
 

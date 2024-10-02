@@ -45,7 +45,7 @@ export default function Entrer(){
     },[nom])
 
     const date = new Date()
-    let cutDate = date.toString().slice(0, 24)
+    let cutDate = date.toString().slice(0, 15)
     const [dateFilter, setDateFilter] = useState(cutDate.slice(0, 15))
     useEffect(()=>{
         // setDateFilter(cutDate.slice(0, 15))
