@@ -1,10 +1,19 @@
 'use client'
+import { useEffect, useState } from "react";
 import Style from "../app/page.module.scss";
 import { usePathname } from "next/navigation";
 
 export default function Home() {
 
     const url = usePathname()
+    const [currentDetail, setCurrentDetail] = useState(false)
+    const [currentPret, setCurrentPret] = useState(false)
+    useEffect(()=>{
+        setCurrentDetail(window.location.href.indexOf('/detail') !== -1 ? true : false)
+    },[])
+    useEffect(()=>{
+        setCurrentPret(window.location.href.indexOf('/Pret') !== -1 ? true : false)
+    },[])
     
   return (
     <div className={Style.nav}>
@@ -14,7 +23,7 @@ export default function Home() {
                 <a href="/" className={
                     [
                         Style.element, 
-                        url == `/` || window.location.href.indexOf('/detail') !== -1 ? Style.color : ''
+                        url == `/` || currentDetail ? Style.color : ''
                     ].join(" ")}>
                         Dashboard
                 </a>
@@ -30,7 +39,7 @@ export default function Home() {
                 <a href="/Pret"  className={
                     [
                         Style.element,
-                         url == '/Pret' || window.location.href.indexOf('/Pret') !== -1 ? Style.color : ""
+                         url == '/Pret' || currentPret ? Style.color : ""
                     ].join(" ")}>
                     Pret
                 </a>
