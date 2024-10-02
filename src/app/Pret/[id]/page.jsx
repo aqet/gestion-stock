@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Style from '../../page.module.scss'
 import Element from '@/components/element'
 
-export default function deta() {
+export default function Deta() {
     const params = window.location.search.slice(6)
     const [id, setId] = useState()
     const [name, setName] = useState(null)
