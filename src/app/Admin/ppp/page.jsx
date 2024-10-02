@@ -90,7 +90,7 @@ export default function Admin() {
                             <th>Code</th>
                             <th>Quantite</th>
                             <th>Prix de vente</th>
-                            <th>Prix d'achat</th>
+                            <th>Prix d&apos;achat</th>
                             <th>difference</th>
                         </tr>
                     </thead>

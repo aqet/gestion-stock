@@ -2,7 +2,7 @@
 import Element from "@/components/element";
 import React, { useEffect, useState } from "react";
 import Style from '@/app/page.module.scss'
-export default function detail({params}){
+export default function Detail({params}){
 
     const uuid = params.id.replace('%20', ' ')
     const [data, setData] = useState([])

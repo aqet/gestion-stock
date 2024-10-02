@@ -3,7 +3,7 @@ import Style from '../page.module.scss'
 import Element from '@/components/element'
 import { useEffect, useState } from 'react'
 
-export default function commande(){
+export default function Pret(){
 
     const [data, setData] = useState()
     const [data1, setData1] = useState([])
@@ -110,13 +110,13 @@ export default function commande(){
             <div  className={Style.contener}>
                 <div className={Style.Loan}>
                     <div className={Style.head}>
-                        <p>Nom de l'emprunteur</p>
+                        <p>Nom de l&apos;emprunteur</p>
                         <p>Montant de la dette total</p>
                     </div>
                     <div className={Style.list}>
                         {
                             data?.map((e, index)=>(
-                                <div>   
+                                <div key={index}>   
                                     {/*tu dois stopper la propagation de londe*/}
                                     <Element key={index} onClick={()=>{jj(e[0]), setCurrentLoan(currentLoan==e[0] ? undefined : e[0])}} zero={e[0]} one={e[1]} />
                                     {
@@ -134,11 +134,11 @@ export default function commande(){
                                                 {data1.map((j, i)=>(
                                                     <>
                                                         {id==j[0] ? 
-                                                            <div onClick={()=>console.log(i)} className={Style.box} id={i}>
+                                                            <div key={i} onClick={()=>console.log(i)} className={Style.box} id={i}>
                                                                 {
                                                                     isVisible=='paye' ?(
                                                                         <>
-                                                                            {e[0]} a t\'il/elle vraiment totalement payer sont pret?
+                                                                            {e[0]} a t&apos;il/elle vraiment totalement payer sont pret?
                                                                             <div className={Style.valider}>
                                                                                 <button onClick={()=>handleSubmit(e[0], j[1])}>Oui</button>
                                                                                 <button onClick={()=>setId(undefined)}>Non</button>
@@ -146,7 +146,7 @@ export default function commande(){
                                                                         </>
                                                                     ):(
                                                                         <>
-                                                                            combien {e[0]} a t'il/elle avance?
+                                                                            combien {e[0]} a t&apos;il/elle avance?
                                                                             <input onChange={(e)=>{avance=e.target.value}} type="number" name="" id="" />
                                                                             <div className={Style.valider}>
                                                                                 <button onClick={()=>setId(undefined)}>Cancel</button>

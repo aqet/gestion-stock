@@ -3,7 +3,7 @@ import Style from '../page.module.scss'
 import Element from '@/components/element'
 import { useEffect, useState } from 'react'
 
-export default function commande(){
+export default function Commande(){
 
     const [nom, setNom] = useState()
     const [qte, setQte] = useState(0)

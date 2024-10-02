@@ -12,7 +12,7 @@ interface Prop {
     onDoubleClick?: Function
 }
 
-export default function({url, zero, one, two, three, four,five,six, onClick, onDoubleClick}:Prop){
+export default function Element({url, zero, one, two, three, four,five,six, onClick, onDoubleClick}:Prop){
 
     return(
     <a onClick={(event) => {onClick ? onClick(event) : ''}} href={url ? `${url}` : undefined} className={Style.product}>

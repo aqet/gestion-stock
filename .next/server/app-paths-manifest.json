@@ -1,5 +1,6 @@
 {
   "/page": "app/page.js",
   "/Commande/page": "app/Commande/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/Pret/page": "app/Pret/page.js",
+  "/Admin/ppp/page": "app/Admin/ppp/page.js"
 }

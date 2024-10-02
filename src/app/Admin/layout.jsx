@@ -57,15 +57,15 @@ export default function Layout({children}) {
   return (
     <>
         {
-            !isAuthentifie ?( 
+            isAuthentifie ?( 
                 <div className={Style.contener}>
                     <div className={Style.auth}>
                         <div className={Style.div}>
-                            <div className={Style.head}>Entrez votre nom d'utilisateur et votre mot de passe</div>
+                            <div className={Style.head}>Entrez votre nom d&apos;utilisateur et votre mot de passe</div>
                             <div className={Style.body}>
                                 <div className={Style.divInput}>
                                     <div>
-                                        <label htmlFor="nom">Nom d'utilisateur</label>
+                                        <label htmlFor="nom">Nom d&apos;utilisateur</label>
                                         <input onChange={(e)=>setNom(e.target.value)} onBlur={(e)=>{removeMonte(e)}} onFocus={(e)=>{addMonte(e)}} id="nom" type="text" />
                                     </div>
                                     <div>
