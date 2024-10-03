@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from "react";
-import Authentification from "./Autthentification/page";
 import Style from '@/app/page.module.scss'
 
 export default function Layout({children}) {
