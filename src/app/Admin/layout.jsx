@@ -6,10 +6,8 @@ export default function Layout({children}) {
     const [nom, setNom] = useState()
     const [pass, setPass] = useState()
     const handleAuthentification = () => {
-        useEffect(()=>{
             setIsAuthentifie(!isAuthentifie);
             localStorage.setItem("isAuthentifie", isAuthentifie);
-        },[])
     };
 
     let saveProduct 
