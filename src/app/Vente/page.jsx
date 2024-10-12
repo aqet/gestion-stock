@@ -108,13 +108,9 @@ export default function Entrer(){
                     document.querySelector('.react-calendar').style.left=document.getElementsByClassName(Style.proposition)[0].offsetLeft-350+'px',      
                     document.querySelector('.react-calendar').style.top=document.getElementsByClassName(Style.proposition)[0].offsetTop+'px'
                 ):filterBy=='periode' ? (
-                    // document.querySelector('.react-calendar').style.position='absolute',
-                    // document.querySelector('.react-calendar').style.left=document.getElementsByClassName(Style.proposition)[0].offsetLeft-350+'px',      
-                    // document.querySelector('.react-calendar').style.top=document.getElementsByClassName(Style.proposition)[0].offsetTop+'px'
                     document.getElementsByClassName(Style.proposition)[1].style.left=document.getElementsByClassName(Style.span)[0].offsetLeft-150+'px',
                     document.getElementsByClassName(Style.proposition)[1].style.top=document.getElementsByClassName(Style.span)[0].offsetTop+30+70+'px'   
-
-                    ):filterBy=='mois' ? (
+                ):filterBy=='mois' ? (
                     document.getElementsByClassName(Style.proposition)[1].style.left=document.getElementsByClassName(Style.span)[0].offsetLeft-150+'px',
                     document.getElementsByClassName(Style.proposition)[1].style.top=document.getElementsByClassName(Style.span)[0].offsetTop+30+'px'   
                 ):filterBy=='annee' ? (

@@ -211,7 +211,7 @@
         
         .btnSave{
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
 
             button{
                 padding: 10px 30px;
@@ -386,7 +386,7 @@
 
             .element{
                 display: flex;
-                align-items: end;
+                align-items: flex-end;
                 flex-direction: column;
                 .head{
                     width: 90%;
@@ -550,7 +550,7 @@
                 border-radius: 10px 10px 0 0 ;
 
                 p{
-                    justify-content: start;
+                    justify-content: flex-start;
                 }
 
                 img{

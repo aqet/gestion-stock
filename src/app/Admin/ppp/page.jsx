@@ -2,7 +2,6 @@
 import Style from '@/app/page.module.scss'
 import { useEffect, useState } from 'react'
 export default function Admin() {
-    // const [auth, setAuth] = useState(localStorage.getItem('0'))
     const [data, setData] = useState()
     const [totalDifference,setTotalDifference] = useState(0)
     const [filter, setFilter] = useState()
