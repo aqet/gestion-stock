@@ -38,7 +38,7 @@ export default function Admin() {
         Array.from(document.querySelectorAll('td')).map((e)=>{
             // e.style.display='flex'
             // e.style.justifyContent='center'
-            somme+=parseInt(e.innerText)   
+            somme+=parseInt(e.innerText) 
         }) 
         setTotalDifference(somme)
     }, [100])
