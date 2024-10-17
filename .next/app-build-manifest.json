@@ -11,18 +11,6 @@
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/Admin/ppp/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Admin/ppp/page.css",
-      "static/chunks/app/Admin/ppp/page.js"
-    ],
-    "/Admin/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Admin/layout.css",
-      "static/chunks/app/Admin/layout.js"
     ]
   }
 }

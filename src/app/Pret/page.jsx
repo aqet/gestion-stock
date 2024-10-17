@@ -34,15 +34,18 @@ export default function Pret(){
     }
     let value = []
     setTimeout(()=>{
-        const a = document.querySelectorAll('.page_product__XJpui')
-        Array.from(a).map((r, index)=>{
-            if (r.childElementCount == 2) {
-                // Do something with the element
-                value += [r.children[0].innerText],
-                (document.querySelectorAll('.page_product__XJpui')).length!= index+1 ? value+=' ' :''
-            }
-            
+        useEffect(()=>{
+            const a = document.querySelectorAll('.page_product__XJpui')
+            Array.from(a).map((r, index)=>{
+                if (r.childElementCount == 2) {
+                    // Do something with the element
+                    value += [r.children[0].innerText],
+                    (document.querySelectorAll('.page_product__XJpui')).length!= index+1 ? value+=' ' :''
+                }
+                
+            })
         })
+        
     }, [100])
     const myFunc= () =>{
         const objet = value.length>0 ? value.split(" ") :'';

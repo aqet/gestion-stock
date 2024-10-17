@@ -7,7 +7,9 @@ export default function Layout({children}) {
     const [pass, setPass] = useState()
     const handleAuthentification = () => {
             setIsAuthentifie(!isAuthentifie);
-            localStorage.setItem("isAuthentifie", isAuthentifie);
+            useEffect(()=>{
+                localStorage.setItem("isAuthentifie", isAuthentifie);
+            })
     };
 
     let saveProduct 
@@ -35,7 +37,7 @@ export default function Layout({children}) {
         saveProduct = {}
     };
 
-    const [isAuthentifie, setIsAuthentifie] = useState(localStorage.getItem("isAuthentifie") === "true");
+    const [isAuthentifie, setIsAuthentifie] = useState(useEffect(()=>{localStorage.getItem("isAuthentifie") === "true"}))
     // const [isAuthentifie, setIsAuthentifie] = useState(false);
     
     const addMonte =(e)=>{
